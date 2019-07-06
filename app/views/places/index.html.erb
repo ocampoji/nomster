@@ -21,8 +21,14 @@
           <small><%= place.comments.last.user.email %></small>
         </blockquote>
       </div>
-    <% end %>  
-  </div>
+    <% end %> 
+
+    <div class="col-12 col-sm-6">
+      <% if place.photos.present? %>
+          <%= image_tag place.photos.last.photo.url, class: "photo_show" %>
+      <% end %>
+    </div> 
+  </div>     
 <% end %>
 
 <% params.permit! %>

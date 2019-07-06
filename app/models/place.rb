@@ -1,6 +1,9 @@
 class Place < ApplicationRecord
     belongs_to :user  
     has_many :comments
+    has_many :photos
+
+    # mount_uploader :photo, PhotoUploader
 
 
     geocoded_by :address
